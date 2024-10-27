@@ -9,11 +9,13 @@
     "@deno/vite-plugin": "npm:@deno/vite-plugin@^1.0.0",
     "@types/react": "npm:@types/react@^18.3.11",
     "@types/react-dom": "npm:@types/react-dom@^18.3.1",
+
     "@vitejs/plugin-react": "npm:@vitejs/plugin-react@^4.3.3",
     "autoprefixer": "npm:autoprefixer@^10.4.20",
     "postcss": "npm:postcss@^8.4.47",
     "react": "npm:react@^18.3.1",
     "react-dom": "npm:react-dom@^18.3.1",
+    "react-router-dom": "npm:react-router-dom@^6.27.0",
     "tailwindcss": "npm:tailwindcss@^3.4.14",
     "vite": "npm:vite@^5.4.9"
   }
