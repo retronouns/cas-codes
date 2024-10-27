@@ -4,6 +4,7 @@
     "lib": ["ES2020", "DOM", "DOM.Iterable", "deno.ns"],
     "jsx": "react-jsx",
     "jsxImportSource": "react",
-    "jsxImportSourceTypes": "@types/react"
+    "jsxImportSourceTypes": "@types/react",
+    "strict": true
   }
 }
