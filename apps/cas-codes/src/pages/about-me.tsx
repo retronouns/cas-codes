@@ -3,7 +3,7 @@ import { Page } from "../components/page.tsx";
 export const AboutMe = () => {
     return (
         <Page>
-            <span className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-6xl">
+            <span className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-4xl h-1/2 min-h-96">
                 <div className="text-4xl font-thin">
                     {`<3`}
                 </div>
@@ -19,8 +19,8 @@ export const AboutMe = () => {
                     <div>
                         I am a fullstack engineer by profession, but when I am
                         not doing that, I enjoy skiing, rock climbing, listening
-                        to audiobooks, playing video games, riding my
-                        motorcycle, and snuggling my girlfriend.
+                        to audiobooks, playing video games, and riding my
+                        motorcycle.
                     </div>
                     <div>
                         -<span className="italic">{" Cas"}</span>
