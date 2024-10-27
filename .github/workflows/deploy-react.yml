@@ -25,6 +25,9 @@ jobs:
         with:
           deno-version: v2.x
 
+      - name: Copy env file
+        run: "cp ./apps/cas-codes/.env.prod ./apps/cas-codes/.env"
+
       - name: Build step
         run: "deno task --cwd ./apps/cas-codes build"
 
