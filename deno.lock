@@ -1,6 +1,8 @@
 {
   "version": "4",
   "specifiers": {
+    "jsr:@std/assert@1": "1.0.6",
+    "jsr:@std/internal@^1.0.4": "1.0.4",
     "npm:@deno/vite-plugin@1": "1.0.0_vite@5.4.10__@types+node@22.5.4_@types+node@22.5.4",
     "npm:@types/node@*": "22.5.4",
     "npm:@types/react-dom@^18.3.1": "18.3.1",
@@ -10,6 +12,17 @@
     "npm:react@^18.3.1": "18.3.1",
     "npm:tailwindcss@^3.4.14": "3.4.14_postcss@8.4.47",
     "npm:vite@^5.4.9": "5.4.10_@types+node@22.5.4"
+  },
+  "jsr": {
+    "@std/assert@1.0.6": {
+      "integrity": "1904c05806a25d94fe791d6d883b685c9e2dcd60e4f9fc30f4fc5cf010c72207",
+      "dependencies": [
+        "jsr:@std/internal"
+      ]
+    },
+    "@std/internal@1.0.4": {
+      "integrity": "62e8e4911527e5e4f307741a795c0b0a9e6958d0b3790716ae71ce085f755422"
+    }
   },
   "npm": {
     "@alloc/quick-lru@5.2.0": {
@@ -1059,6 +1072,29 @@
     },
     "yaml@2.6.0": {
       "integrity": "sha512-a6ae//JvKDEra2kdi1qzCyrJW/WZCgFi8ydDV+eXExl95t+5R+ijnqHJbz9tmMh8FUjx3iv2fCQ4dclAQlO2UQ=="
+    }
+  },
+  "workspace": {
+    "members": {
+      "apps/cas-codes": {
+        "dependencies": [
+          "npm:@deno/vite-plugin@1",
+          "npm:@types/react-dom@^18.3.1",
+          "npm:@types/react@^18.3.11",
+          "npm:@vitejs/plugin-react@^4.3.3",
+          "npm:autoprefixer@^10.4.20",
+          "npm:postcss@^8.4.47",
+          "npm:react-dom@^18.3.1",
+          "npm:react@^18.3.1",
+          "npm:tailwindcss@^3.4.14",
+          "npm:vite@^5.4.9"
+        ]
+      },
+      "services/api": {
+        "dependencies": [
+          "jsr:@std/assert@1"
+        ]
+      }
     }
   }
 }
