@@ -22,6 +22,5 @@
     "react-dom": "npm:react-dom@^18.3.1",
     "tailwindcss": "npm:tailwindcss@^3.4.14",
     "vite": "npm:vite@^5.4.9"
-  },
-  "nodeModulesDir": "auto"
+  }
 }
