@@ -29,5 +29,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "cas-codes"
-          entrypoint: "main.ts"
-          root: "./services/api/src"
+          entrypoint: "src/main.ts"
+          root: "./services/api"
