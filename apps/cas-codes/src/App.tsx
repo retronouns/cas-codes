@@ -11,7 +11,6 @@ function App() {
           "accept": "application/json",
         },
         method: "GET",
-        // mode: "no-cors",
       });
       const response = await req.json() as { message: string };
       setMessage(response.message);
@@ -20,16 +19,22 @@ function App() {
 
   return (
     <>
-      <div className="w-screen h-screen flex flex-col gap-8 font-cas text-cas-text p-8">
-        <div className="flex flex-row gap-8 bg-cas-dark border-2 border-cas-text p-2">
-          <span className="font-bold flex-grow">Cas Codes</span>
-          <span>{message} UNDER CONSTRUCTION!!!</span>
+      <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2">
+        <div className="flex flex-row gap-4 p-2 place-items-center">
+          <span className="text-4xl font-medium italic flex-grow">
+            cas.codes
+          </span>
+          <span className="italic">{message}</span>
+          <span>UNDER CONSTRUCTION!!!</span>
         </div>
         <div className="flex-grow flex flex-row gap-8">
-          <span className="flex-grow bg-cas-light border-2 border-cas-text p-2">
-            lorem ipsum dolor sit amet
+          <span className="flex flex-col gap-4 bg-cas-dark border-2 border-cas-text rounded-lg p-4">
+            <div className="font-bold italic underline hover:cursor-pointer">
+              About Me
+            </div>
+            <div className="hover:cursor-pointer">Contact</div>
           </span>
-          <span className="flex-grow bg-cas-light border-2 border-cas-text p-2">
+          <span className="flex-grow bg-cas-light border-2 border-cas-text rounded-lg p-4">
             lorem ipsum dolor sit amet
           </span>
         </div>
