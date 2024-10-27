@@ -1,0 +1,3 @@
+{
+  "workspace": ["./apps/cas-codes", "./services/api"]
+}
