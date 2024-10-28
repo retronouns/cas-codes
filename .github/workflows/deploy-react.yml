@@ -35,5 +35,5 @@ jobs:
         uses: denoland/deployctl@v1
         with:
           project: "cas-codes"
-          entrypoint: "jsr:@std/http/file-server"
+          entrypoint: "https://raw.githubusercontent.com/retronouns/cas-codes/refs/heads/main/services/spa-server/spa-server.ts"
           root: "./apps/cas-codes/dist"

@@ -34,7 +34,7 @@ export const Page = ({ children }: Props) => {
                 </Link>
                 <span className="italic">Visitors: {visitorCount ?? 0}</span>
             </div>
-            <div className="flex-grow flex flex-row gap-8">
+            <div className="flex-grow flex flex-col md:flex-row gap-8">
                 <NavLeft />
                 {children}
             </div>
