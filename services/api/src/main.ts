@@ -10,7 +10,6 @@ await fastify.register(cors, {
 });
 
 fastify.get("/visitors", async () => {
-    console.log("/visitors");
     try {
         await fastify.pg.queryArray(
             "INSERT INTO visits(created_at) VALUES(NOW());",
