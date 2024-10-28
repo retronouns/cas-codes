@@ -32,15 +32,13 @@ export const Page = ({ children }: Props) => {
                 <Link className="text-4xl font-medium italic flex-grow" to="/">
                     cas.codes
                 </Link>
+                <span className="italic">Visitors: {visitorCount ?? 0}</span>
             </div>
             <div className="flex-grow flex flex-col md:flex-row gap-8">
                 <NavLeft />
                 {children}
             </div>
             <div className="flex flex-row gap-4 place-items-center">
-                <span className="italic flex-grow">
-                    Visitors: {visitorCount ?? 0}
-                </span>
                 <Link
                     className="text-sm"
                     to="https://github.com/retronouns/cas-codes"
