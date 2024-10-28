@@ -25,13 +25,10 @@ jobs:
         with:
           deno-version: v2.x
 
-      - name: Create env file
-        run: |
-          touch ./services/api/.env
-          echo PG_CONNECTION_STRING=${{ secrets.PG_CONNECTION_STRING }} >> ./services/api/.env
-
       - name: Run Migrations
         run: "deno task --cwd ./services/api migrate"
+        env:
+          PG_CONNECTION_STRING: ${{ secrets.PG_CONNECTION_STRING }}
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1
