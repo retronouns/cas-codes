@@ -26,7 +26,7 @@ jobs:
           deno-version: v2.x
 
       - name: Run Migrations
-        run: "deno task migrate"
+        run: "deno task --cwd ./services/api migrate"
 
       - name: Upload to Deno Deploy
         uses: denoland/deployctl@v1

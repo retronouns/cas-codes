@@ -18,7 +18,6 @@
     "npm:react-dom@^18.3.1": "18.3.1_react@18.3.1",
     "npm:react-router-dom@^6.27.0": "6.27.0_react@18.3.1_react-dom@18.3.1__react@18.3.1",
     "npm:react@^18.3.1": "18.3.1",
-    "npm:sql-template-strings@^2.2.2": "2.2.2",
     "npm:tailwindcss@^3.4.14": "3.4.14_postcss@8.4.47",
     "npm:vite@*": "5.4.10_@types+node@22.5.4",
     "npm:vite@^5.4.9": "5.4.10_@types+node@22.5.4"
@@ -1239,9 +1238,6 @@
     "split2@4.2.0": {
       "integrity": "sha512-UcjcJOWknrNkF6PLX83qcHM6KHgVKNkV62Y8a5uYDVv9ydGQVwAHMKqHdJje1VTWpljG0WYpCDhrCdAOYH4TWg=="
     },
-    "sql-template-strings@2.2.2": {
-      "integrity": "sha512-UXhXR2869FQaD+GMly8jAMCRZ94nU5KcrFetZfWEMd+LVVG6y0ExgHAhatEcKZ/wk8YcKPdi+hiD2wm75lq3/Q=="
-    },
     "string-width@4.2.3": {
       "integrity": "sha512-wKyQRQpjJ0sIp62ErSZdGsjMJWsap5oRNihHhu6G7JVO/9jIB6UyevL+tXuOqrng8j/cxKTWyWUwvSTriiZz/g==",
       "dependencies": [
@@ -1638,8 +1634,7 @@
           "npm:@fastify/cors@^10.0.1",
           "npm:@fastify/type-provider-json-schema-to-ts@4",
           "npm:fastify-plugin@^5.0.1",
-          "npm:fastify@5",
-          "npm:sql-template-strings@^2.2.2"
+          "npm:fastify@5"
         ]
       }
     }
