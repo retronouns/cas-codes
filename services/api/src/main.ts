@@ -8,6 +8,7 @@ await fastify.register(pg, { connectionString: PG_CONNECTION_STRING ?? "" });
 await fastify.register(cors, {
     origin: "*",
 });
+
 console.log(PG_CONNECTION_STRING);
 fastify.get("/", async (req, res) => {
     res.send({ message: "Hello world!" });
