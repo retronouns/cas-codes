@@ -9,10 +9,20 @@ await fastify.register(cors, {
     origin: "*",
 });
 
-console.log(PG_CONNECTION_STRING);
-
-fastify.get("/", async (req, res) => {
-    res.send({ message: "Hello world!" });
+fastify.get("/visitors", async () => {
+    console.log("/visitors");
+    try {
+        await fastify.pg.queryArray(
+            "INSERT INTO visits(created_at) VALUES(NOW());",
+        );
+        const select = await fastify.pg.queryObject(
+            "SELECT COUNT(*) as qty FROM visits",
+        );
+        const data = select.rows as { qty: bigint }[];
+        return { count: Number(data[0].qty) };
+    } catch (error) {
+        console.error(error);
+    }
 });
 
 await fastify.listen({ port: 8000 });
