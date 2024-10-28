@@ -21,7 +21,7 @@ const NavLink = (
     const path = globalThis.location.pathname;
     return (
         <Link
-            className={path === to ? "font-bold italic" : ""}
+            className={path === to ? "font-bold italic" : "font-medium"}
             to={to}
         >
             {children}
