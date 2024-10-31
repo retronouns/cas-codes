@@ -10,7 +10,7 @@ export const NavLeft = () => {
                 <NavLink to="/links">Links</NavLink>
             </span>
             <Link
-                className="text-sm font-medium p-2"
+                className="font-medium p-4"
                 to="https://github.com/retronouns/cas-codes"
                 target="_blank"
             >

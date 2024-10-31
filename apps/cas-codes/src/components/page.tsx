@@ -11,13 +11,13 @@ export const Page = ({ children }: Props) => {
     const { visitorCount } = useAppContext();
 
     return (
-        <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2">
+        <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2 max-w-screen-xl">
             <div className="flex flex-row gap-6 p-2 place-items-center">
-                <Link className="text-4xl font-medium italic" to="/">
+                <Link className="text-4xl font-medium italic flex-grow" to="/">
                     cas.codes
                 </Link>
-                <span className="font-semibold italic">
-                    Visitors: {visitorCount ?? 0}
+                <span className="font-medium italic">
+                    Visitors: {visitorCount}
                 </span>
             </div>
             <div className="flex-grow flex flex-col md:flex-row gap-8">
