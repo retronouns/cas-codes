@@ -9,13 +9,15 @@ import {
 } from "react";
 import { API_HOST } from "../env.ts";
 
-const AppContext = createContext({ visitorCount: 0 });
+const AppContext = createContext<{ visitorCount: number | null }>({
+    visitorCount: null,
+});
 
 interface Props {
     children: ReactNode;
 }
 export const AppContextProvider = ({ children }: Props) => {
-    const [visitorCount, setVisitorCount] = useState(0);
+    const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
     useEffect(() => {
         (async () => {
