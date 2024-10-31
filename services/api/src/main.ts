@@ -9,16 +9,23 @@ await fastify.register(cors, {
     origin: "*",
 });
 
+let visitors: null | number = null;
+
 fastify.get("/visitors", async () => {
     try {
+        if (visitors === null) {
+            const select = await fastify.pg.queryObject(
+                "SELECT COUNT(*) as qty FROM visits",
+            );
+            const data = select.rows as { qty: bigint }[];
+            visitors = Number(data[0].qty);
+        }
+
         await fastify.pg.queryArray(
             "INSERT INTO visits(created_at) VALUES(NOW());",
         );
-        const select = await fastify.pg.queryObject(
-            "SELECT COUNT(*) as qty FROM visits",
-        );
-        const data = select.rows as { qty: bigint }[];
-        return { count: Number(data[0].qty) };
+
+        return { count: ++visitors };
     } catch (error) {
         console.error(error);
     }
