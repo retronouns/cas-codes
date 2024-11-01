@@ -13,8 +13,7 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
         if (!matches) {
             throw new Error("Invalid bksy post URL");
         }
-        const handle = matches[1];
-        const postId = matches[2];
+        const [_, handle, postId] = matches;
         if (!handle || !postId) {
             throw new Error("Invalid bksy post URL");
         }
@@ -34,50 +33,50 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
             <div className="flex-1 h-min max-w-[600px]">
                 <div className="flex-1 flex-col flex gap-2 p-4" lang="en">
                     <div className="flex gap-2.5 items-center">
-                        <div className="w-10 h-10 overflow-hidden rounded-full bg-neutral-300 shrink-0">
+                        <div className="w-10 h-10 overflow-hidden rounded-full shrink-0">
                             <img src={post?.author.avatar} />
                         </div>
-                        <div>
+                        <div className="text-cas-text">
                             <p>{post?.author.displayName}</p>
                             <p>@{post?.author.handle}</p>
                         </div>
                     </div>
-                    <p className="min-[300px]:text-lg leading-6 break-word break-words whitespace-pre-wrap">
+                    <p className="min-[300px]:text-lg text-cas-text leading-6 break-word break-words whitespace-pre-wrap">
                         {post?.record.text}
                     </p>
 
                     <time
                         dateTime={post?.record.createdAt}
-                        className="text-textLight mt-1 text-sm"
+                        className="text-cas-text mt-1 text-sm"
                     >
                         {post &&
                             new Date(post.record.createdAt).toLocaleString()}
                     </time>
                     <div className="border-t border-cas-text w-full pt-2.5 flex items-center gap-5 text-sm">
-                        <div className="flex items-center gap-2">
+                        <div className="flex text-cas-text items-center gap-2">
                             <img
                                 src="./like.svg"
                                 className="w-5 h-5"
                             />
-                            <p className="font-bold text-neutral-500 mb-px">
+                            <p className="font-bold mb-px">
                                 {post?.likeCount}
                             </p>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex text-cas-text items-center gap-2">
                             <img
                                 src="./reskeet.svg"
                                 className="w-5 h-5"
                             />
-                            <p className="font-bold text-neutral-500 mb-px">
+                            <p className="font-bold mb-px">
                                 {post?.repostCount}
                             </p>
                         </div>
-                        <div className="flex items-center gap-2">
+                        <div className="flex text-cas-text items-center gap-2">
                             <img
                                 src="./reply.svg"
                                 className="w-5 h-5"
                             />
-                            <p className="font-bold text-neutral-500 mb-px">
+                            <p className="font-bold mb-px">
                                 {post?.replyCount}
                             </p>
                         </div>
