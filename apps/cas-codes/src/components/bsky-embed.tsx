@@ -2,10 +2,11 @@
 import { useEffect, useState } from "react";
 
 interface Props {
-    postUrl: string;
+    postUrl: string; // should be a post url like https://bsky.app/profile/*/post/*
 }
 export const BlueskyEmbed = ({ postUrl }: Props) => {
     const [post, setPost] = useState<Post>();
+
     useEffect(() => {
         const matches = postUrl.match(
             /^https:\/\/bsky.app\/profile\/([^/]+)\/post\/(.+)$/,
@@ -23,6 +24,7 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
             setPost(post);
         })();
     }, [postUrl]);
+
     return (
         <a
             href={postUrl}
