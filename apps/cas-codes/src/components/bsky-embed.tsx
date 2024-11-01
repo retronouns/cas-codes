@@ -19,7 +19,9 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
             throw new Error("Invalid bksy post URL");
         }
         (async () => {
-            const did = await resolveHandle(handle);
+            const did = handle.match(/did:.+/)
+                ? handle
+                : await resolveHandle(handle);
             const post = await getPost(did, postId);
             setPost(post);
         })();
@@ -46,14 +48,10 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
                     <p className="min-[300px]:text-lg text-cas-text leading-6 break-word break-words whitespace-pre-wrap">
                         {post?.record.text}
                     </p>
-
-                    <time
-                        dateTime={post?.record.createdAt}
-                        className="text-cas-text mt-1 text-sm"
-                    >
+                    <p className="text-cas-text pt-1 text-sm">
                         {post &&
                             new Date(post.record.createdAt).toLocaleString()}
-                    </time>
+                    </p>
                     <div className="border-t border-cas-text w-full pt-2.5 flex items-center gap-5 text-sm">
                         <div className="flex text-cas-text items-center gap-2">
                             <img
