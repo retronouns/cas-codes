@@ -4,7 +4,8 @@ import { BlueskyEmbed } from "../components/bsky-embed.tsx";
 export const Posts = () => {
     return (
         <Page>
-            <div className="border-2 border-cas-text rounded-lg h-min bg-cas-light">
+            <div className="flex flex-col gap-6">
+                <BlueskyEmbed postUrl="https://bsky.app/profile/cas.bsky.social/post/3l7ugn6p4p326" />
                 <BlueskyEmbed postUrl="https://bsky.app/profile/cas.bsky.social/post/3l7qz6r4fgs26" />
             </div>
         </Page>

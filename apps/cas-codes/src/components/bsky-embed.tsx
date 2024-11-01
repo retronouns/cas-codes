@@ -32,7 +32,7 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
             rel="noopener noreferrer nofollow"
             className="cursor-pointer hover:underline underline-offset-2"
         >
-            <div className="flex-1 h-min max-w-[600px]">
+            <div className="flex-1 h-min max-w-[600px] border-2 border-cas-text rounded-lg bg-cas-light">
                 <div className="flex-1 flex-col flex gap-2 p-4" lang="en">
                     <div className="flex gap-2.5 items-center">
                         <div className="w-10 h-10 overflow-hidden rounded-full shrink-0">
