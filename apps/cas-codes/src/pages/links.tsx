@@ -4,7 +4,7 @@ import { Page } from "../components/page.tsx";
 export const Links = () => {
     return (
         <Page>
-            <span className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min">
+            <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min">
                 <Link
                     to="https://github.com/retronouns"
                     target="_blank"
@@ -17,7 +17,7 @@ export const Links = () => {
                 >
                     BlueSky
                 </Link>
-            </span>
+            </div>
         </Page>
     );
 };

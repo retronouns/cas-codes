@@ -3,7 +3,7 @@ import { Page } from "../components/page.tsx";
 export const AboutMe = () => {
     return (
         <Page>
-            <span className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-2xl h-fit">
+            <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-2xl h-fit">
                 <div className="text-4xl font-thin">
                     {`<3`}
                 </div>
@@ -29,7 +29,7 @@ export const AboutMe = () => {
                 <div className="text-4xl font-thin">
                     {`<3`}
                 </div>
-            </span>
+            </div>
         </Page>
     );
 };

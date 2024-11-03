@@ -8,6 +8,7 @@ export const NavLeft = () => {
             <span className="flex flex-row md:flex-col gap-6 bg-cas-dark border-2 border-cas-text rounded-lg p-4 h-min min-w-fit">
                 <NavLink to="/about-me">About Me</NavLink>
                 <NavLink to="/posts">Posts</NavLink>
+                <NavLink to="/projects">Projects</NavLink>
                 <NavLink to="/links">Links</NavLink>
             </span>
             <Link
