@@ -13,13 +13,17 @@ export const Projects = () => {
                     imageSrc="./cas-codes.png"
                 >
                     <p>
-                        This website!
+                        This website! It's built in a monorepo containing both
+                        the frontend and backend code.
                     </p>
                     <p>
-                        The frontend is using Deno 2, React, and TailwindCSS.
+                        The frontend uses Deno 2, React, and TailwindCSS. The
+                        backend uses Deno 2, Fastify, and Postgres.
                     </p>
                     <p>
-                        The backend is using Deno 2, Fastify, and Postgres.
+                        CI/CD uses Github Actions, and can independently
+                        identify if frontend or backend code was modified, only
+                        deploying what is necessary.
                     </p>
                 </ProjectCard>
                 <ProjectCard
