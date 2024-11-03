@@ -40,6 +40,12 @@ export const Projects = () => {
                         No other code generation is used.
                     </p>
                 </ProjectCard>
+                <ProjectCard
+                    title="rustle"
+                    url="https://github.com/retronouns/rustle"
+                >
+                    <p>A Wordle clone in Rust.</p>
+                </ProjectCard>
             </div>
         </Page>
     );
@@ -49,7 +55,7 @@ interface ProjectCardProps {
     title: string;
     url: string;
     children: ReactNode;
-    imageSrc: string;
+    imageSrc?: string;
 }
 const ProjectCard = (
     { title, url, children, imageSrc }: ProjectCardProps,
@@ -65,7 +71,7 @@ const ProjectCard = (
                 <div className="flex flex-col gap-2 border-cas-text border-t pt-2">
                     {children}
                 </div>
-                <img src={imageSrc}></img>
+                {imageSrc && <img src={imageSrc}></img>}
             </div>
         </Link>
     );
