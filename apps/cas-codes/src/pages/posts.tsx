@@ -11,6 +11,13 @@ const POST_URLS = [
     "https://bsky.app/profile/cas.bsky.social/post/3l7fnszf56n2z",
 ];
 
+// i think the post ID appears to be alphanumerically incrementing? this seems to put in chronological order without an api call!!!
+POST_URLS.sort((a, b) => {
+    const postA = a.match(/post\/([^/]+)/)?.[1] ?? "";
+    const postB = b.match(/post\/([^/]+)/)?.[1] ?? "";
+    return postA < postB ? 1 : -1;
+});
+
 export const Posts = () => {
     return (
         <Page>
