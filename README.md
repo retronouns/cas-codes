@@ -2,6 +2,8 @@
 
 This is my porfolio website!
 
+It's built in a monorepo containing both the frontend and backend code. CI/CD uses Github Actions, and can independently identify if frontend or backend code was modified, only deploying what is necessary.
+
 The frontend is using Deno 2, React, and TailwindCSS. (`./apps/cas-codes` directory)
 
 [Frontend README](/apps/cas-codes/README.md)
