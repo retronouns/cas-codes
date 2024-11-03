@@ -75,7 +75,10 @@ const ProjectCard = (
                 <div className="flex flex-col gap-2 border-cas-text border-t pt-2">
                     {children}
                 </div>
-                {imageSrc && <img src={imageSrc}></img>}
+                {imageSrc && (
+                    <img className="border-2 border-cas-text" src={imageSrc}>
+                    </img>
+                )}
             </div>
         </Link>
     );
