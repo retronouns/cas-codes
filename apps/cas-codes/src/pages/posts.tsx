@@ -21,7 +21,7 @@ POST_URLS.sort((a, b) => {
 export const Posts = () => {
     return (
         <Page title="Bluesky Posts">
-            <div className="flex flex-col gap-6 pb-6">
+            <div className="flex flex-col gap-4">
                 {POST_URLS.map((postUrl) => <BlueskyEmbed postUrl={postUrl} />)}
             </div>
         </Page>

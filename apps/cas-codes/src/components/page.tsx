@@ -13,7 +13,7 @@ export const Page = ({ title, children }: Props) => {
 
     return (
         <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2 max-w-screen-xl">
-            <div className="flex flex-row gap-6 p-2 place-items-center">
+            <div className="flex flex-row p-2 place-items-center">
                 <Link className="text-4xl font-medium italic flex-grow" to="/">
                     cas.codes
                 </Link>
@@ -21,12 +21,9 @@ export const Page = ({ title, children }: Props) => {
                     Visitors: {visitorCount}
                 </span>
             </div>
-            <div className="flex-grow flex flex-col md:flex-row gap-8">
+            <div className="flex-grow flex flex-col md:flex-row gap-4 pb-4">
                 <NavLeft />
-                <div className="flex flex-col gap-4 p-2">
-                    <p className="italic font-bold text-xl">{title}</p>
-                    {children}
-                </div>
+                {children}
             </div>
         </div>
     );

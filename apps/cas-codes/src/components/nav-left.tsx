@@ -4,7 +4,7 @@ import { Link } from "react-router-dom";
 
 export const NavLeft = () => {
     return (
-        <div className="flex flex-row md:flex-col gap-6">
+        <div className="flex flex-row flex-wrap md:flex-col gap-6">
             <span className="flex flex-row md:flex-col gap-6 bg-cas-dark border-2 border-cas-text rounded-lg p-4 h-min min-w-fit">
                 <NavLink to="/about-me">About Me</NavLink>
                 <NavLink to="/posts">Posts</NavLink>
