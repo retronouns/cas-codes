@@ -4,7 +4,7 @@ import { Page } from "../components/page.tsx";
 import { ReactNode } from "react";
 export const Projects = () => {
     return (
-        <Page title="Notable Projects">
+        <Page>
             <div className="flex flex-col gap-4">
                 <ProjectCard
                     title="cas.codes"

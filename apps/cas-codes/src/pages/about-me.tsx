@@ -2,7 +2,7 @@ import { Page } from "../components/page.tsx";
 
 export const AboutMe = () => {
     return (
-        <Page title="About Me">
+        <Page>
             <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-2xl h-fit">
                 <div className="text-4xl font-thin">
                     {`<3`}
