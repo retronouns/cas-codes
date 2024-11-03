@@ -3,7 +3,7 @@ import { Page } from "../components/page.tsx";
 
 export const Links = () => {
     return (
-        <Page>
+        <Page title="Links">
             <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min">
                 <Link
                     to="https://github.com/retronouns"

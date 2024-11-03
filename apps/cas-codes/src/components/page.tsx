@@ -5,9 +5,10 @@ import { NavLeft } from "./nav-left.tsx";
 import { useAppContext } from "../context/app-context.tsx";
 
 interface Props {
+    title: string;
     children: ReactNode;
 }
-export const Page = ({ children }: Props) => {
+export const Page = ({ title, children }: Props) => {
     const { visitorCount } = useAppContext();
 
     return (
@@ -22,7 +23,10 @@ export const Page = ({ children }: Props) => {
             </div>
             <div className="flex-grow flex flex-col md:flex-row gap-8">
                 <NavLeft />
-                {children}
+                <div className="flex flex-col gap-4 p-2">
+                    <p className="italic font-bold text-xl">{title}</p>
+                    {children}
+                </div>
             </div>
         </div>
     );
