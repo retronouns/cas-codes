@@ -25,7 +25,7 @@ module.exports = {
         },
       },
       animation: {
-        wiggle: "wiggle 0.4s ease-in-out infinite",
+        wiggle: "wiggle 0.5s ease-in-out infinite",
         squiggle: "turbulence 0.4s infinite",
       },
       fontFamily: {
