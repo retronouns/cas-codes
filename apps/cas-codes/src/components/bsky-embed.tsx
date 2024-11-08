@@ -35,53 +35,54 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
             className="cursor-pointer hover:underline underline-offset-2"
         >
             <div className="flex h-min max-w-[600px] border-2 border-cas-text rounded-lg bg-cas-light transition ease-in-out hover:scale-[1.03]">
-                <div className="flex flex-col gap-2 p-4" lang="en">
-                    <div className="flex gap-2.5 items-center">
-                        <div className="w-10 h-10 overflow-hidden rounded-full shrink-0">
-                            <img src={post?.author.avatar} />
+                {post && (
+                    <div className="flex flex-col gap-2 p-4" lang="en">
+                        <div className="flex gap-2.5 items-center">
+                            <div className="w-10 h-10 overflow-hidden rounded-full shrink-0">
+                                <img src={post.author.avatar} />
+                            </div>
+                            <div className="text-cas-text font-semibold">
+                                <p>{post.author.displayName}</p>
+                                <p>@{post.author.handle}</p>
+                            </div>
                         </div>
-                        <div className="text-cas-text font-semibold">
-                            <p>{post?.author.displayName}</p>
-                            <p>@{post?.author.handle}</p>
+                        <p className="min-[300px]:text-lg text-cas-text leading-6 break-word break-words whitespace-pre-wrap">
+                            {post.record.text}
+                        </p>
+                        <p className="text-cas-text pt-1 text-sm font-medium">
+                            {new Date(post.record.createdAt).toLocaleString()}
+                        </p>
+                        <div className="border-t border-cas-text w-full pt-2.5 flex items-center gap-5 text-sm">
+                            <div className="flex text-cas-text items-center gap-2">
+                                <img
+                                    src="./like.svg"
+                                    className="w-5 h-5"
+                                />
+                                <p className="font-bold mb-px">
+                                    {post.likeCount}
+                                </p>
+                            </div>
+                            <div className="flex text-cas-text items-center gap-2">
+                                <img
+                                    src="./reskeet.svg"
+                                    className="w-5 h-5"
+                                />
+                                <p className="font-bold mb-px">
+                                    {post.repostCount}
+                                </p>
+                            </div>
+                            <div className="flex text-cas-text items-center gap-2">
+                                <img
+                                    src="./reply.svg"
+                                    className="w-5 h-5"
+                                />
+                                <p className="font-bold mb-px">
+                                    {post.replyCount}
+                                </p>
+                            </div>
                         </div>
                     </div>
-                    <p className="min-[300px]:text-lg text-cas-text leading-6 break-word break-words whitespace-pre-wrap">
-                        {post?.record.text}
-                    </p>
-                    <p className="text-cas-text pt-1 text-sm font-medium">
-                        {post &&
-                            new Date(post.record.createdAt).toLocaleString()}
-                    </p>
-                    <div className="border-t border-cas-text w-full pt-2.5 flex items-center gap-5 text-sm">
-                        <div className="flex text-cas-text items-center gap-2">
-                            <img
-                                src="./like.svg"
-                                className="w-5 h-5"
-                            />
-                            <p className="font-bold mb-px">
-                                {post?.likeCount}
-                            </p>
-                        </div>
-                        <div className="flex text-cas-text items-center gap-2">
-                            <img
-                                src="./reskeet.svg"
-                                className="w-5 h-5"
-                            />
-                            <p className="font-bold mb-px">
-                                {post?.repostCount}
-                            </p>
-                        </div>
-                        <div className="flex text-cas-text items-center gap-2">
-                            <img
-                                src="./reply.svg"
-                                className="w-5 h-5"
-                            />
-                            <p className="font-bold mb-px">
-                                {post?.replyCount}
-                            </p>
-                        </div>
-                    </div>
-                </div>
+                )}
             </div>
         </Link>
     );

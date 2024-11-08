@@ -15,7 +15,7 @@ export const NavLeft = () => {
             </span>
             <span className="flex flex-row md:flex-col gap-4 md:gap-6 max-md:py-4 md:px-4">
                 <button
-                    className={`text-cas-text font-medium ease-in-out hover:scale-110 hover:italic ${
+                    className={`text-cas-text font-medium ease-in-out hover:scale-110 hover:italic animate-squiggle ${
                         enableSquiggle ? `` : "line-through"
                     }`}
                     onClick={() => setEnableSquiggle(!enableSquiggle)}
