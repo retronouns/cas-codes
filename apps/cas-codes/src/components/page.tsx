@@ -5,10 +5,9 @@ import { NavLeft } from "./nav-left.tsx";
 import { useAppContext } from "../context/app-context.tsx";
 
 interface Props {
-    title: string;
     children: ReactNode;
 }
-export const Page = ({ title, children }: Props) => {
+export const Page = ({ children }: Props) => {
     const { visitorCount } = useAppContext();
 
     return (
