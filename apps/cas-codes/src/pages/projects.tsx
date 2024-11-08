@@ -69,7 +69,7 @@ const ProjectCard = (
             target="_blank"
             className="cursor-pointer hover:underline underline-offset-2"
         >
-            <div className="flex flex-col gap-2 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min">
+            <div className="flex flex-col gap-2 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min transition ease-in-out hover:scale-[1.02]">
                 <p className="font-bold text-lg">{title}</p>
                 <div className="flex flex-col gap-2 border-cas-text border-t pt-2">
                     {children}

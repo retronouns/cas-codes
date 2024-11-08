@@ -12,7 +12,7 @@ export const NavLeft = () => {
                 <NavLink to="/links">Links</NavLink>
             </span>
             <Link
-                className="font-medium p-4"
+                className="font-medium p-4 transition ease-in-out hover:scale-110"
                 to="https://github.com/retronouns/cas-codes"
                 target="_blank"
             >
@@ -32,7 +32,9 @@ const NavLink = (
     const path = globalThis.location.pathname;
     return (
         <Link
-            className={path === to ? "font-bold italic" : "font-medium"}
+            className={path === to
+                ? "font-bold italic"
+                : "font-medium transition ease-in-out hover:scale-110 hover:italic"}
             to={to}
         >
             {children}

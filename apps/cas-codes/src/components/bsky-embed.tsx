@@ -34,13 +34,13 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
             target="_blank"
             className="cursor-pointer hover:underline underline-offset-2"
         >
-            <div className="flex h-min max-w-[600px] border-2 border-cas-text rounded-lg bg-cas-light">
+            <div className="flex h-min max-w-[600px] border-2 border-cas-text rounded-lg bg-cas-light transition ease-in-out hover:scale-[1.03]">
                 <div className="flex flex-col gap-2 p-4" lang="en">
                     <div className="flex gap-2.5 items-center">
                         <div className="w-10 h-10 overflow-hidden rounded-full shrink-0">
                             <img src={post?.author.avatar} />
                         </div>
-                        <div className="text-cas-text">
+                        <div className="text-cas-text font-semibold">
                             <p>{post?.author.displayName}</p>
                             <p>@{post?.author.handle}</p>
                         </div>
@@ -48,7 +48,7 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
                     <p className="min-[300px]:text-lg text-cas-text leading-6 break-word break-words whitespace-pre-wrap">
                         {post?.record.text}
                     </p>
-                    <p className="text-cas-text pt-1 text-sm">
+                    <p className="text-cas-text pt-1 text-sm font-medium">
                         {post &&
                             new Date(post.record.createdAt).toLocaleString()}
                     </p>
