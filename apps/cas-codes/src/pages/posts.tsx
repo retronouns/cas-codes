@@ -2,6 +2,7 @@ import { Page } from "../components/page.tsx";
 import { BlueskyEmbed } from "../components/bsky-embed.tsx";
 
 const POST_URLS = [
+    "https://bsky.app/profile/cas.bsky.social/post/3lafydijtn42l",
     "https://bsky.app/profile/cas.bsky.social/post/3l7uiasat7k2e",
     "https://bsky.app/profile/cas.bsky.social/post/3l7ugn6p4p326",
     "https://bsky.app/profile/cas.bsky.social/post/3l7rkcrc75l2x",
