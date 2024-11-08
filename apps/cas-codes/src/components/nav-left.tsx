@@ -34,7 +34,7 @@ const NavLink = (
         <Link
             className={path === to
                 ? "font-bold italic"
-                : "font-medium transition ease-in-out hover:scale-110 hover:italic"}
+                : "font-medium transition ease-in-out hover:scale-110 hover:italic hover:animate-wiggle w-fit"}
             to={to}
         >
             {children}
