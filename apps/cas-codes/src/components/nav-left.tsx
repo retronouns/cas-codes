@@ -12,7 +12,7 @@ export const NavLeft = () => {
                 <NavLink to="/links">Links</NavLink>
             </span>
             <Link
-                className="font-medium p-4 transition ease-in-out hover:scale-110"
+                className="font-medium p-4 transition ease-in-out hover:scale-110 hover:italic hover:underline"
                 to="https://github.com/retronouns/cas-codes"
                 target="_blank"
             >

@@ -13,12 +13,17 @@ export const Page = ({ children }: Props) => {
     return (
         <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2 max-w-screen-xl">
             <div className="flex flex-row p-2 place-items-center">
-                <Link className="text-4xl font-medium italic flex-grow" to="/">
+                <Link
+                    className="text-4xl font-medium italic flex-grow animate-squiggle"
+                    to="/"
+                >
                     cas.codes
                 </Link>
-                <span className="font-medium italic">
-                    Visitors: {visitorCount}
-                </span>
+                {visitorCount && (
+                    <span className="font-medium italic animate-squiggle">
+                        Visitors: {visitorCount}
+                    </span>
+                )}
             </div>
             <div className="flex-grow flex flex-col md:flex-row gap-4 pb-4">
                 <NavLeft />

@@ -11,6 +11,23 @@ module.exports = {
           "text": "#534859",
         },
       },
+      keyframes: {
+        wiggle: {
+          "0%, 100%": { transform: "rotate(-3deg)" },
+          "50%": { transform: "rotate(3deg)" },
+        },
+        turbulence: {
+          "0%": { filter: "url(#squiggly-0)" },
+          "25%": { filter: "url(#squiggly-1)" },
+          "50%": { filter: "url(#squiggly-2)" },
+          "75%": { filter: "url(#squiggly-3)" },
+          "100%": { filter: "url(#squiggly-4)" },
+        },
+      },
+      animation: {
+        wiggle: "wiggle 1s ease-in-out infinite",
+        squiggle: "turbulence 0.4s infinite alternate",
+      },
       fontFamily: {
         "cas": ["VictorMono", "monospace"],
       },

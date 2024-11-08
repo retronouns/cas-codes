@@ -11,10 +11,12 @@ export const AboutMe = () => {
                     <div>Hello! ^_^</div>
                     <div>
                         My name is{" "}
-                        <span className="italic font-bold">{" Cas"}</span>, but
-                        I also go by
-                        <span className="italic font-bold">{" Caroline"}</span>.
-                        Call me by whichever you like! {`<3`}
+                        <span className="italic font-bold animate-squiggle">
+                            {" Cas"}
+                        </span>, but I also go by
+                        <span className="italic font-bold animate-squiggle">
+                            {" Caroline"}
+                        </span>. Call me by whichever you like! {`<3`}
                     </div>
                     <div>
                         I am a fullstack engineer by profession, but when I am
@@ -23,7 +25,9 @@ export const AboutMe = () => {
                         motorcycle.
                     </div>
                     <div>
-                        -<span className="italic font-bold">{" Cas"}</span>
+                        -<span className="italic font-bold animate-squiggle">
+                            {" Cas"}
+                        </span>
                     </div>
                 </div>
                 <div className="text-4xl font-thin">
