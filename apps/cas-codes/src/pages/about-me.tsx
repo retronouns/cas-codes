@@ -1,15 +1,17 @@
 import { Page } from "~/components/page.tsx";
+// @deno-types="@types/react"
+// import { useState } from "react";
 
 export const AboutMe = () => {
     return (
         <Page>
             <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-2xl h-fit font-medium">
-                <div className="text-4xl font-extralight">
-                    {`<3`}
-                </div>
                 <div className="flex-grow flex flex-col gap-4">
-                    <div>Hello! ^_^</div>
-                    <div>
+                    <p className="text-4xl font-extralight">
+                        {`<3`}
+                    </p>
+                    <p>Hello! ^_^</p>
+                    <p>
                         My name is{" "}
                         <span className="italic font-bold hover:animate-squiggle">
                             {" Cas"}
@@ -17,21 +19,21 @@ export const AboutMe = () => {
                         <span className="italic font-bold hover:animate-squiggle">
                             {" Caroline"}
                         </span>. Call me by whichever you like! {`<3`}
-                    </div>
-                    <div>
+                    </p>
+                    <p>
                         I am a fullstack engineer by profession, but when I am
                         not doing that, I enjoy skiing, rock climbing, listening
                         to audiobooks, playing video games, and riding my
                         motorcycle.
-                    </div>
-                    <div>
+                    </p>
+                    <p>
                         -<span className="italic font-bold hover:animate-squiggle">
                             {" Cas"}
                         </span>
-                    </div>
-                </div>
-                <div className="text-4xl font-extralight">
-                    {`<3`}
+                    </p>
+                    <p className="text-4xl font-extralight">
+                        {`<3`}
+                    </p>
                 </div>
             </div>
         </Page>
