@@ -11,10 +11,10 @@ export const AboutMe = () => {
                     <div>Hello! ^_^</div>
                     <div>
                         My name is{" "}
-                        <span className="italic font-bold">
+                        <span className="italic font-bold hover:animate-squiggle">
                             {" Cas"}
                         </span>, but I also go by
-                        <span className="italic font-bold">
+                        <span className="italic font-bold hover:animate-squiggle">
                             {" Caroline"}
                         </span>. Call me by whichever you like! {`<3`}
                     </div>
@@ -25,7 +25,7 @@ export const AboutMe = () => {
                         motorcycle.
                     </div>
                     <div>
-                        -<span className="italic font-bold">
+                        -<span className="italic font-bold hover:animate-squiggle">
                             {" Cas"}
                         </span>
                     </div>

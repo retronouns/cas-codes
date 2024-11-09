@@ -14,7 +14,7 @@ export const Page = ({ children }: Props) => {
         <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2 max-w-screen-xl relative">
             <div className="flex flex-row p-2 place-items-center">
                 <Link
-                    className="text-4xl font-medium italic"
+                    className="text-4xl font-medium italic hover:animate-squiggle"
                     to="/"
                 >
                     cas.codes
