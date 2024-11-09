@@ -32,10 +32,10 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
         <Link
             to={postUrl}
             target="_blank"
-            className="cursor-pointer hover:underline underline-offset-2"
+            className="cursor-pointer hover:underline underline-offset-2 transition-transform ease-in-out hover:scale-[1.03]"
         >
-            <div className="flex h-min max-w-[600px] border-2 border-cas-text rounded-lg bg-cas-light transition-transform ease-in-out hover:scale-[1.03] animate-squiggle">
-                {post && (
+            {post && (
+                <div className="flex h-min max-w-[600px] border-2 border-cas-text rounded-lg bg-cas-light">
                     <div className="flex flex-col gap-2 p-4" lang="en">
                         <div className="flex gap-2.5 items-center">
                             <div className="w-10 h-10 overflow-hidden rounded-full shrink-0">
@@ -82,8 +82,8 @@ export const BlueskyEmbed = ({ postUrl }: Props) => {
                             </div>
                         </div>
                     </div>
-                )}
-            </div>
+                </div>
+            )}
         </Link>
     );
 };

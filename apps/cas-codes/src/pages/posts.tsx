@@ -25,7 +25,9 @@ export const Posts = () => {
     return (
         <Page>
             <div className="flex flex-col gap-4">
-                {POST_URLS.map((postUrl) => <BlueskyEmbed postUrl={postUrl} />)}
+                {POST_URLS.map((postUrl) => (
+                    <BlueskyEmbed key={postUrl} postUrl={postUrl} />
+                ))}
             </div>
         </Page>
     );
