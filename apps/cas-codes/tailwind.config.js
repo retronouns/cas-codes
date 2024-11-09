@@ -12,11 +12,7 @@ module.exports = {
         },
       },
       keyframes: {
-        wiggle: {
-          "0%, 100%": { transform: "rotate(-3deg)" },
-          "50%": { transform: "rotate(3deg)" },
-        },
-        turbulence: {
+        squiggle: {
           "0%": { filter: "url(#squiggly-0)" },
           "25%": { filter: "url(#squiggly-1)" },
           "50%": { filter: "url(#squiggly-2)" },
@@ -25,8 +21,7 @@ module.exports = {
         },
       },
       animation: {
-        wiggle: "wiggle 0.5s ease-in-out infinite",
-        squiggle: "turbulence 0.4s infinite alternate",
+        squiggle: "squiggle 0.4s infinite alternate",
       },
       fontFamily: {
         "cas": ["VictorMono", "monospace"],
