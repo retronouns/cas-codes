@@ -21,7 +21,7 @@ module.exports = {
         },
       },
       animation: {
-        squiggle: "squiggle 0.4s infinite alternate",
+        squiggle: "squiggle 0.4s infinite",
       },
       fontFamily: {
         "cas": ["VictorMono", "monospace"],

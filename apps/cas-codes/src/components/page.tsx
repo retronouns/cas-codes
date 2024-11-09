@@ -8,15 +8,13 @@ interface Props {
     children: ReactNode;
 }
 export const Page = ({ children }: Props) => {
-    const { visitorCount, enableSquiggle } = useAppContext();
+    const { visitorCount } = useAppContext();
 
     return (
         <div className="w-screen h-screen flex flex-col gap-2 font-cas text-cas-text p-6 pt-2 max-w-screen-xl relative">
             <div className="flex flex-row p-2 place-items-center">
                 <Link
-                    className={`text-4xl font-medium italic ${
-                        enableSquiggle ? "animate-squiggle" : ""
-                    }`}
+                    className="text-4xl font-medium italic"
                     to="/"
                 >
                     cas.codes

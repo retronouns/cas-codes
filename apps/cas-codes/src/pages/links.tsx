@@ -6,18 +6,20 @@ export const Links = () => {
         <Page>
             <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min w-fit">
                 <Link
-                    className="transition-transform ease-in-out hover:scale-110 hover:italic hover:underline w-min"
+                    className="flex flex-row gap-2 place-items-center transition-transform ease-in-out hover:scale-110 hover:italic hover:underline w-fit"
                     to="https://github.com/retronouns"
                     target="_blank"
                 >
-                    GitHub
+                    <img src="./github-mark.svg" className="w-5 h-5" />
+                    <p>GitHub</p>
                 </Link>
                 <Link
-                    className="transition-transform ease-in-out hover:scale-110 hover:italic hover:underline w-min"
+                    className="flex flex-row gap-2 place-items-center transition-transform ease-in-out hover:scale-110 hover:italic hover:underline w-fit"
                     to="https://bsky.app/profile/cas.bsky.social"
                     target="_blank"
                 >
-                    BlueSky
+                    <img src="./bluesky-logo.svg" className="w-5 h-5" />
+                    <p>BlueSky</p>
                 </Link>
             </div>
         </Page>

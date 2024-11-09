@@ -1,9 +1,7 @@
 // @deno-types="@types/react"
 import {
     createContext,
-    type Dispatch,
     ReactNode,
-    type SetStateAction,
     useContext,
     useEffect,
     useMemo,
@@ -14,13 +12,9 @@ import { API_HOST } from "~/env.ts";
 const AppContext = createContext<
     {
         visitorCount: number | null;
-        enableSquiggle: boolean;
-        setEnableSquiggle: Dispatch<SetStateAction<boolean>>;
     }
 >({
     visitorCount: null,
-    enableSquiggle: true,
-    setEnableSquiggle: () => {},
 });
 
 interface Props {
@@ -28,7 +22,6 @@ interface Props {
 }
 export const AppContextProvider = ({ children }: Props) => {
     const [visitorCount, setVisitorCount] = useState<number | null>(null);
-    const [enableSquiggle, setEnableSquiggle] = useState(true);
 
     useEffect(() => {
         (async () => {
@@ -41,11 +34,9 @@ export const AppContextProvider = ({ children }: Props) => {
     }, []);
 
     const contextValue = useMemo(
-        () => ({ visitorCount, enableSquiggle, setEnableSquiggle }),
+        () => ({ visitorCount }),
         [
             visitorCount,
-            enableSquiggle,
-            setEnableSquiggle,
         ],
     );
 
