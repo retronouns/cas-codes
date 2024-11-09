@@ -1,8 +1,6 @@
 import { Page } from "../components/page.tsx";
-import { useAppContext } from "../context/app-context.tsx";
 
 export const AboutMe = () => {
-    const { enableSquiggle } = useAppContext();
     return (
         <Page>
             <div className="flex flex-col gap-4 bg-cas-light border-2 border-cas-text rounded-lg p-6 max-w-2xl h-fit font-medium">
