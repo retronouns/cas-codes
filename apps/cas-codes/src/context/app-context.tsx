@@ -1,7 +1,7 @@
 // @deno-types="@types/react"
 import {
     createContext,
-    ReactNode,
+    type ReactNode,
     useContext,
     useEffect,
     useMemo,

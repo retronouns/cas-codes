@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import { Page } from "~/components/page.tsx";
 // @deno-types="@types/react"
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 export const Projects = () => {
     return (
         <Page>

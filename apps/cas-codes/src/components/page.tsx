@@ -1,5 +1,5 @@
 // @deno-types="@types/react"
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 import { Link } from "react-router-dom";
 import { NavLeft } from "~/components/nav-left.tsx";
 import { useAppContext } from "~/context/app-context.tsx";
