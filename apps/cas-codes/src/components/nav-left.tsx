@@ -15,7 +15,7 @@ export const NavLeft = () => {
             </span>
             <span className="flex flex-row md:flex-col gap-4 md:gap-6 max-md:py-4 md:px-4">
                 <button
-                    className={`text-cas-text font-medium ease-in-out hover:scale-110 hover:italic animate-squiggle ${
+                    className={`text-cas-text font-medium transition-transform ease-in-out hover:scale-110 hover:italic ${
                         enableSquiggle ? `` : "line-through"
                     }`}
                     onClick={() => setEnableSquiggle(!enableSquiggle)}
@@ -23,7 +23,7 @@ export const NavLeft = () => {
                     Squiggle
                 </button>
                 <Link
-                    className="font-medium transition ease-in-out hover:scale-110 hover:italic hover:underline"
+                    className="font-medium transition-transform ease-in-out hover:scale-110 hover:italic hover:underline"
                     to="https://github.com/retronouns/cas-codes"
                     target="_blank"
                 >
@@ -46,7 +46,7 @@ const NavLink = (
         <Link
             className={path === to
                 ? "font-bold italic"
-                : "font-medium transition ease-in-out hover:scale-110 hover:italic hover:animate-wiggle w-fit"}
+                : "font-medium transition-transform ease-in-out hover:scale-110 hover:italic hover:animate-wiggle w-fit"}
             to={to}
         >
             {children}
