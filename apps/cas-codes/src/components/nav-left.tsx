@@ -1,7 +1,7 @@
 // @deno-types="@types/react"
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { useAppContext } from "../context/app-context.tsx";
+import { useAppContext } from "~/context/app-context.tsx";
 
 export const NavLeft = () => {
     const { setEnableSquiggle, enableSquiggle } = useAppContext();

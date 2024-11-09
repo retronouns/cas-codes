@@ -1,9 +1,9 @@
 import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
-import { AboutMe } from "./pages/about-me.tsx";
-import { Posts } from "./pages/posts.tsx";
-import { Projects } from "./pages/projects.tsx";
-import { Links } from "./pages/links.tsx";
-import { AppContextProvider } from "./context/app-context.tsx";
+import { AboutMe } from "~/pages/about-me.tsx";
+import { Posts } from "~/pages/posts.tsx";
+import { Projects } from "~/pages/projects.tsx";
+import { Links } from "~/pages/links.tsx";
+import { AppContextProvider } from "~/context/app-context.tsx";
 
 export const App = () => {
   return (

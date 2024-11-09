@@ -9,7 +9,7 @@ import {
     useMemo,
     useState,
 } from "react";
-import { API_HOST } from "../env.ts";
+import { API_HOST } from "~/env.ts";
 
 const AppContext = createContext<
     {

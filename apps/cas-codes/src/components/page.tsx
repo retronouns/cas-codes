@@ -1,8 +1,8 @@
 // @deno-types="@types/react"
 import { ReactNode } from "react";
 import { Link } from "react-router-dom";
-import { NavLeft } from "./nav-left.tsx";
-import { useAppContext } from "../context/app-context.tsx";
+import { NavLeft } from "~/components/nav-left.tsx";
+import { useAppContext } from "~/context/app-context.tsx";
 
 interface Props {
     children: ReactNode;

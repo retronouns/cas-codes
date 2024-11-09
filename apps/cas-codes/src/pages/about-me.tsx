@@ -1,4 +1,4 @@
-import { Page } from "../components/page.tsx";
+import { Page } from "~/components/page.tsx";
 
 export const AboutMe = () => {
     return (

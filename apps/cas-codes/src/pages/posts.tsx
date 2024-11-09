@@ -1,5 +1,5 @@
-import { Page } from "../components/page.tsx";
-import { BlueskyEmbed } from "../components/bsky-embed.tsx";
+import { Page } from "~/components/page.tsx";
+import { BlueskyEmbed } from "~/components/bsky-embed.tsx";
 
 const POST_URLS = [
     // "https://bsky.app/profile/did:plc:blmee3sssscqkd6edrs7dbh6/post/3lag3omb45j2l",
