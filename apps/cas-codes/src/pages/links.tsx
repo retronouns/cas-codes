@@ -11,7 +11,7 @@ export const Links = () => {
                     target="_blank"
                 >
                     <img src="./github-mark.svg" className="w-5 h-5" />
-                    <p>GitHub</p>
+                    GitHub
                 </Link>
                 <Link
                     className="flex flex-row gap-2 place-items-center transition-transform ease-in-out hover:scale-110 hover:italic hover:underline w-fit"
@@ -19,7 +19,7 @@ export const Links = () => {
                     target="_blank"
                 >
                     <img src="./bluesky-logo.svg" className="w-5 h-5" />
-                    <p>BlueSky</p>
+                    BlueSky
                 </Link>
             </div>
         </Page>
