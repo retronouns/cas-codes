@@ -8,6 +8,7 @@ import {
     useState,
 } from "react";
 import { API_HOST } from "~/env.ts";
+import { useSearchParams } from "react-router-dom";
 
 const AppContext = createContext<
     {
@@ -21,16 +22,21 @@ interface Props {
     children: ReactNode;
 }
 export const AppContextProvider = ({ children }: Props) => {
+    const [params] = useSearchParams();
+    const queryVisitors = !(params.get("queryVisitors") === "false");
+
     const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
     useEffect(() => {
-        (async () => {
-            const req = await fetch(`${API_HOST}/visitors`, {
-                method: "GET",
-            });
-            const visitors = await req.json() as { count: number };
-            setVisitorCount(visitors.count);
-        })();
+        if (queryVisitors) {
+            (async () => {
+                const req = await fetch(`${API_HOST}/visitors`, {
+                    method: "GET",
+                });
+                const visitors = await req.json() as { count: number };
+                setVisitorCount(visitors.count);
+            })();
+        }
     }, []);
 
     const contextValue = useMemo(

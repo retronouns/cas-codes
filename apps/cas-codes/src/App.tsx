@@ -7,8 +7,8 @@ import { AppContextProvider } from "~/context/app-context.tsx";
 
 export const App = () => {
   return (
-    <AppContextProvider>
-      <BrowserRouter>
+    <BrowserRouter>
+      <AppContextProvider>
         <Routes>
           <Route path="/" element={<Navigate to="/about-me" replace />} />
           <Route path="/about-me" element={<AboutMe />} />
@@ -16,7 +16,7 @@ export const App = () => {
           <Route path="/projects" element={<Projects />} />
           <Route path="/links" element={<Links />} />
         </Routes>
-      </BrowserRouter>
-    </AppContextProvider>
+      </AppContextProvider>
+    </BrowserRouter>
   );
 };

@@ -7,7 +7,7 @@ export const Projects = () => {
     <Page>
       <div className="flex flex-col gap-4">
         <Link
-          to="https://github.com/retronouns/cas-codes"
+          to="https://github.com/retronouns/cas-codes?queryVisitors=false"
           target="_blank"
           className="cursor-pointer hover:underline underline-offset-2"
         >
