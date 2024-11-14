@@ -7,7 +7,7 @@ export const Projects = () => {
     <Page>
       <div className="flex flex-col gap-4">
         <Link
-          to="https://github.com/retronouns/cas-codes?queryVisitors=false"
+          to="https://github.com/retronouns/cas-codes"
           target="_blank"
           className="cursor-pointer hover:underline underline-offset-2"
         >
@@ -28,7 +28,10 @@ export const Projects = () => {
                 necessary.
               </p>
             </div>
-            <iframe src="https://cas.codes" className="w-full aspect-video" />
+            <iframe
+              src="https://cas.codes?queryVisitors=false"
+              className="w-full aspect-video"
+            />
           </div>
         </Link>
         <ProjectCard
