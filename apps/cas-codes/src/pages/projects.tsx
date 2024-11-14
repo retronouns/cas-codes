@@ -6,25 +6,31 @@ export const Projects = () => {
   return (
     <Page>
       <div className="flex flex-col gap-4">
-        <ProjectCard
-          title="cas.codes"
-          url="https://github.com/retronouns/cas-codes"
-          imageSrc="./cas-codes.png"
+        <Link
+          to="https://github.com/retronouns/cas-codes"
+          target="_blank"
+          className="cursor-pointer hover:underline underline-offset-2"
         >
-          <p>
-            This website! It's built in a monorepo containing both the frontend
-            and backend code.
-          </p>
-          <p>
-            The frontend uses Deno 2, React, and TailwindCSS. The backend uses
-            Deno 2, Fastify, and Postgres.
-          </p>
-          <p>
-            CI/CD uses Github Actions, and can independently identify if
-            frontend or backend code was modified, only deploying what is
-            necessary.
-          </p>
-        </ProjectCard>
+          <div className="flex flex-col gap-2 bg-cas-light border-2 border-cas-text rounded-lg p-4 h-min transition-transform ease-in-out hover:scale-[1.02]">
+            <p className="font-bold text-lg">cas.codes</p>
+            <div className="flex flex-col gap-2 border-cas-text border-t pt-2">
+              <p>
+                This website! It's built in a monorepo containing both the
+                frontend and backend code.
+              </p>
+              <p>
+                The frontend uses Deno 2, React, and TailwindCSS. The backend
+                uses Deno 2, Fastify, and Postgres.
+              </p>
+              <p>
+                CI/CD uses Github Actions, and can independently identify if
+                frontend or backend code was modified, only deploying what is
+                necessary.
+              </p>
+            </div>
+            <iframe src="https://cas.codes" className="w-full aspect-video" />
+          </div>
+        </Link>
         <ProjectCard
           title="sql-ts-map"
           url="https://github.com/retronouns/sql-ts-map"
@@ -73,10 +79,12 @@ const ProjectCard = (
         <div className="flex flex-col gap-2 border-cas-text border-t pt-2">
           {children}
         </div>
-        {imageSrc && <img
-          className="border-2 border-cas-text"
-          src={imageSrc}
-        />}
+        {imageSrc && (
+          <img
+            className="border-2 border-cas-text"
+            src={imageSrc}
+          />
+        )}
       </div>
     </Link>
   );
