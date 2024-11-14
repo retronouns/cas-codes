@@ -29,7 +29,7 @@ export const Projects = () => {
               </p>
             </div>
             <iframe
-              src="https://cas.codes?queryVisitors=false"
+              src="https://cas.codes"
               className="w-full aspect-video"
             />
           </div>

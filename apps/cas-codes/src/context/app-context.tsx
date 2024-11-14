@@ -8,7 +8,7 @@ import {
     useState,
 } from "react";
 import { API_HOST } from "~/env.ts";
-import { useSearchParams } from "react-router-dom";
+import { cacheAsync } from "~/utils/cache.ts";
 
 const AppContext = createContext<
     {
@@ -18,25 +18,28 @@ const AppContext = createContext<
     visitorCount: null,
 });
 
+const DAY = 1000 * 60 * 60 * 24;
 interface Props {
     children: ReactNode;
 }
 export const AppContextProvider = ({ children }: Props) => {
-    const [params] = useSearchParams();
-    const queryVisitors = !(params.get("queryVisitors") === "false");
-
     const [visitorCount, setVisitorCount] = useState<number | null>(null);
 
     useEffect(() => {
-        if (queryVisitors) {
-            (async () => {
-                const req = await fetch(`${API_HOST}/visitors`, {
-                    method: "GET",
-                });
-                const visitors = await req.json() as { count: number };
-                setVisitorCount(visitors.count);
-            })();
-        }
+        (async () => {
+            const visitors = await cacheAsync({
+                key: "visitorCount",
+                ttl: DAY,
+                f: async () => {
+                    const req = await fetch(`${API_HOST}/visitors`, {
+                        method: "GET",
+                    });
+                    return (await req.json() as { count: number }).count;
+                },
+            });
+
+            setVisitorCount(visitors);
+        })();
     }, []);
 
     const contextValue = useMemo(
