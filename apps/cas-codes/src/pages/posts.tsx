@@ -3,7 +3,6 @@ import { BlueskyEmbed } from "~/components/bsky-embed.tsx";
 
 const POST_URLS = [
     // "https://bsky.app/profile/did:plc:blmee3sssscqkd6edrs7dbh6/post/3lag3omb45j2l",
-    "https://bsky.app/profile/cas.bsky.social/post/3lagcsnwjn22v",
     "https://bsky.app/profile/cas.bsky.social/post/3lafydijtn42l",
     "https://bsky.app/profile/cas.bsky.social/post/3l7uiasat7k2e",
     "https://bsky.app/profile/cas.bsky.social/post/3l7ugn6p4p326",
