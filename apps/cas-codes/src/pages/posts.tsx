@@ -27,6 +27,8 @@ const POST_URLS = [
     "https://bsky.app/profile/cas.bsky.social/post/3l7hztkcsbj2f",
     "https://bsky.app/profile/cas.bsky.social/post/3l7hzcfwau62r",
     "https://bsky.app/profile/cas.bsky.social/post/3l7fnszf56n2z",
+    "https://bsky.app/profile/cas.bsky.social/post/3kskjttwebt2j",
+    "https://bsky.app/profile/cas.bsky.social/post/3kflpizc2hc2v",
 ];
 
 // i think the post ID appears to be alphanumerically incrementing? this seems to put in chronological order without an api call!!!
